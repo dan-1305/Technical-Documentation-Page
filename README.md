@@ -25,7 +25,6 @@ This project demonstrates semantic HTML, CSS layout, and responsive design.
 ## 🖼️ Demo
 👉 [Live Demo Here](https://dan-1305.github.io/Technical-Documentation-Page/) 
 
-*(Replace with your GitHub Pages link, e.g. `https://username.github.io/technical-documentation-page/`)*
 
 ---
 
