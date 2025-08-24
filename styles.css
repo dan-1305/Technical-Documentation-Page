@@ -1,0 +1,78 @@
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+/* Sidebar nav (luôn ở cạnh trái, luôn thấy trên màn hình lớn) */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;            /* luôn chạm cạnh trái cửa sổ */
+  width: 260px;
+  height: 100vh;      /* luôn hiển thị */
+  overflow-y: auto;
+  background: #1f2937;
+  color: #fff;
+  padding: 20px;
+  border-right: 1px solid #111827;
+}
+
+#navbar header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px; /* header phải đứng trước link (đã đảm bảo trong HTML) */
+}
+
+#navbar .nav-link {
+  display: block;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+#navbar .nav-link:hover {
+  color: #f59e0b;
+}
+
+/* Main content đẩy sang phải để không bị nav che */
+#main-doc {
+  margin-left: 260px;
+  padding: 32px;
+}
+
+.main-section {
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+
+.main-section header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+pre {
+  background: #f3f4f6;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+code { font-family: Consolas, Monaco, monospace; }
+
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+
+/* Media query: trên màn hình nhỏ, cho nav lên trên */
+@media (max-width: 800px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
+  #main-doc {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

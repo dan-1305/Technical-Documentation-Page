@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Sidebar Nav -->
+  <nav id="navbar">
+    <header>JavaScript Docs</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Setup">Setup</a>
+    <a class="nav-link" href="#Basics">Basics</a>
+    <a class="nav-link" href="#Arrays_and_Loops">Arrays and Loops</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+    <a class="nav-link" href="#DOM_Manipulation">DOM Manipulation</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript là ngôn ngữ lập trình giúp web trở nên tương tác.</p>
+      <p>Nó chạy trên trình duyệt và ngày nay còn chạy trên server với Node.js.</p>
+      <p>Trang này tóm tắt những khái niệm cốt lõi cho người mới bắt đầu.</p>
+      <p>Ví dụ alert đơn giản:</p>
+      <pre><code>console.log("Hello, world!");</code></pre>
+    </section>
+
+    <section class="main-section" id="Setup">
+      <header>Setup</header>
+      <p>Bạn chỉ cần một trình duyệt hiện đại và trình soạn thảo.</p>
+      <p>Thêm JS trực tiếp trong HTML bằng thẻ <code>&lt;script&gt;</code>.</p>
+      <pre><code>&lt;script&gt;
+  // file inline hoặc import từ file .js
+&lt;/script&gt;</code></pre>
+      <p>Cấu trúc file khuyến nghị:</p>
+      <ul>
+        <li>index.html</li>
+        <li>styles.css</li>
+        <li>app.js</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Basics">
+      <header>Basics</header>
+      <p>Biến: <code>let</code> và <code>const</code> là khuyến nghị.</p>
+      <p>Kiểu dữ liệu: string, number, boolean, null, undefined, object.</p>
+      <p>Toán tử: +, -, *, /, %, ===, !==, &gt;, &lt; …</p>
+      <pre><code>const name = "Danh";
+let age = 20;
+console.log(name, age);</code></pre>
+      <ul>
+        <li>Khai báo biến</li>
+        <li>Toán tử so sánh</li>
+        <li>Cấu trúc điều kiện</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Arrays_and_Loops">
+      <header>Arrays and Loops</header>
+      <p>Mảng lưu danh sách giá trị.</p>
+      <p>Vòng lặp giúp lặp qua phần tử.</p>
+      <pre><code>const arr = [1, 2, 3];
+for (let i = 0; i &lt; arr.length; i++) {
+  console.log(arr[i]);
+}</code></pre>
+      <p>Phương thức phổ biến của mảng:</p>
+      <ul>
+        <li><code>push</code>, <code>pop</code></li>
+        <li><code>map</code>, <code>filter</code>, <code>reduce</code></li>
+      </ul>
+      <p>Ví dụ map:</p>
+      <pre><code>const doubled = arr.map(n =&gt; n * 2);</code></pre>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Hàm giúp tái sử dụng logic.</p>
+      <p>Cú pháp khai báo:</p>
+      <pre><code>function sum(a, b) {
+  return a + b;
+}
+const add = (a, b) =&gt; a + b;</code></pre>
+      <p>Hàm có thể nhận tham số mặc định.</p>
+      <p>Hàm cũng là giá trị (first-class).</p>
+    </section>
+
+    <section class="main-section" id="DOM_Manipulation">
+      <header>DOM Manipulation</header>
+      <p>DOM là cấu trúc cây đại diện cho HTML.</p>
+      <p>Truy cập phần tử bằng <code>document.querySelector</code>.</p>
+      <pre><code>const btn = document.querySelector("#btn");
+btn.addEventListener("click", () =&gt; alert("Clicked!"));</code></pre>
+      <p>Cập nhật nội dung và thuộc tính động.</p>
+      <ul>
+        <li>Thêm/xóa class</li>
+        <li>Thay đổi text</li>
+        <li>Thêm node mới</li>
+      </ul>
+      <p>Giữ code gọn, tách JS ra file riêng khi dự án lớn.</p>
+    </section>
+  </main>
+
+</body>
+</html>
